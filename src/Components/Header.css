@@ -1,0 +1,54 @@
+/* src/components/Header.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white ; 
+    z-index: 1000; /* pour qu'il soit toujours au-dessus des autres éléments */
+  }
+  
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px; /* Padding autour du menu */
+  }
+  
+.nav-list {
+    list-style: none; /* Supprime les puces des liens */
+    display: flex; /* Affiche les liens sur la même ligne */
+    gap: 40px; /* Espacement entre les éléments */
+    margin: 0;
+  }
+  
+.nav-list li {
+    display: inline-block;
+  }
+  
+.nav-list a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: black; /* Couleur des liens */
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+  }
+
+.nav-list a::after {
+    content: ''; /* Crée un pseudo-élément pour le soulignement */
+    position: absolute;
+    bottom: -5px; /* Place le soulignement en bas du lien */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Hauteur du soulignement */
+    background-color: #c45824; /* Couleur du soulignement */
+    transform: scaleX(0); /* Au départ, le soulignement est invisible */
+    transform-origin: bottom left; /* Le soulignement va se "dérouler" de la droite vers la gauche */
+    transition: transform 0.3s ease-in; /* Animation douce */
+  }
+
+  /* Lors du survol, on déploie le soulignement */
+.nav-list a:hover::after {
+    transform: scaleX(1); /* Lors du survol, le soulignement devient visible */
+}
+  
+  

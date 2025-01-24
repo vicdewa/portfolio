@@ -1,0 +1,123 @@
+.bio-container {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; /* Le contenu est organisé en colonne */
+  align-items: center;
+}
+
+.bio-main-content {
+  display: flex; /* Photo et texte côte à côte */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 40px; /* Espacement entre la section principale et la section formation/compétences */
+  background-color: #e6e3e3;
+  padding: 40px;
+  gap: 60px;
+}
+
+.bio-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10%; 
+}
+
+.bio-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.bio-text h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.bio-text p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Bloc pour la section formation et compétences */
+.bio-skills {
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.bio-skills-section {
+  display: flex; /* Formation et compétences en deux colonnes */
+  gap: 150px;
+}
+
+.skills-description,
+.skills-list {
+  width: 50%; /* Chaque bloc occupe 50% de la largeur */
+  text-align: left;
+}
+
+.skills-description h4,
+.skills-list h4 {
+  font-size: 20px;
+  color: #444;
+}
+
+.skills-description p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.skills-list ul {
+  padding: 0;
+}
+
+.skills-list ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.skills-list ul li strong {
+  color: #2e6cf9;
+}
+
+/* Responsive : sur mobile, la formation et les compétences sont en colonne */
+@media (max-width: 768px) {
+  .bio-main-content {
+    flex-direction: column; /* Sur mobile, on met photo et texte en colonne */
+    gap: 20px;
+  }
+
+  .bio-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bio-text {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .bio-skills-section {
+    flex-direction: column; /* Sur mobile, on met formation et compétences en colonne */
+    gap: 40px;
+  }
+
+  .skills-description,
+  .skills-list {
+    width: 100%; /* Chaque section occupe toute la largeur */
+  }
+
+  .bio-skills {
+    padding: 15px;
+    width: 90%;
+  }
+}
+.highlight-text {
+  color: #c45824;
+  font-weight: bold;  
+}
+
